@@ -1,0 +1,39 @@
+{
+  "name": "colorcube/auto404",
+  "description": "Page Not Found handling without configuration. Handle redirect to other domains when pages were moved.",
+  "type": "typo3-cms-extension",
+  "keywords": [
+    "TYPO3",
+    "extension",
+    "auto404",
+    "Page Not Found",
+    "404",
+    "301",
+    "redirect"
+  ],
+  "homepage": "https://github.com/colorcube/auto404",
+  "support": {
+    "issues": "https://github.com/colorcube/auto404/issues"
+  },
+  "authors": [
+    {
+      "name": "René Fritz",
+      "email": "r.fritz@colorcube.de",
+      "role": "Developer",
+      "homepage": "http://www.colorcube.de"
+    }
+  ],
+  "license": "GPL-2.0+",
+  "autoload": {
+    "psr-4": {
+      "Colorcube\\Auto404\\": "Classes/"
+    }
+  },
+  "replace": {
+    "auto404": "self.version",
+    "typo3-ter/auto404": "self.version"
+  },
+  "require": {
+    "typo3/cms": ">=7.6.0 <=8.99.99"
+  }
+}
