@@ -4,5 +4,6 @@ if (!defined ('TYPO3_MODE')) {
 }
 
 
-$GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = 'USER_FUNCTION:EXT:'.$_EXTKEY.'/Classes/Hooks/FrontendHook.php:Colorcube\\Auto404\\Hooks\\FrontendHook->pageErrorHandler';
-
+if (TYPO3_MODE === 'FE') {
+    $GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = 'USER_FUNCTION:EXT:' . $_EXTKEY . '/Classes/Hooks/FrontendHook.php:Colorcube\\Auto404\\Hooks\\FrontendHook->pageErrorHandler';
+}
