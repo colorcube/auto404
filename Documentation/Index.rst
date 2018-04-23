@@ -30,10 +30,10 @@ auto404
 		Page Not Found,404,301,redirect
 
 	:Copyright:
-		2017
+		2017-2018
 
 	:Author:
-		Rene Fritz
+		René Fritz
 
 	:Email:
 		r.fritz@colorcube.de
@@ -46,15 +46,16 @@ auto404
 		|today|
 
 	The content of this document is related to TYPO3,
-	a GNU/GPL CMS/Framework available from `www.typo3.org <https://typo3.org/>`__.
+	a GNU/GPL CMS/Framework available from `www.typo3.org <https://typo3.org/>`_.
 
 
 	**Table of Contents**
 
 .. toctree::
-	:maxdepth: 3
-	:titlesonly:
+	:maxdepth: 5
 
-	Introduction/Index
-	AdministratorManual/Index
-	Contribute
+    	Introduction/Index
+    	Usage/Index
+    	AdministratorManual/Index
+    	Support/Index
+    	Links

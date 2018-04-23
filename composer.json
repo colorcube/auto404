@@ -1,7 +1,7 @@
 {
   "name": "colorcube/auto404",
-  "description": "Page Not Found handling without configuration. Handle redirect to other domains when pages were moved.",
   "type": "typo3-cms-extension",
+  "description": "Page Not Found handling without configuration. Handle redirect to other domains when pages were moved.",
   "keywords": [
     "TYPO3",
     "extension",
@@ -11,6 +11,7 @@
     "301",
     "redirect"
   ],
+  "license": "GPL-2.0-or-later",
   "homepage": "https://github.com/colorcube/auto404",
   "support": {
     "issues": "https://github.com/colorcube/auto404/issues"
@@ -23,17 +24,22 @@
       "homepage": "http://www.colorcube.de"
     }
   ],
-  "license": "GPL-2.0+",
+  "require": {
+    "php": ">=5.6.0",
+    "typo3/cms-core": "^7.6 || ^8.0"
+  },
   "autoload": {
     "psr-4": {
-      "Colorcube\\Auto404\\": "Classes/"
+      "Colorcube\\Auto404\\": "Classes"
     }
   },
   "replace": {
     "auto404": "self.version",
     "typo3-ter/auto404": "self.version"
   },
-  "require": {
-    "typo3/cms": ">=7.6.0 <=8.99.99"
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "auto404"
+    }
   }
 }

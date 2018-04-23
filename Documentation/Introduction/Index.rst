@@ -6,8 +6,11 @@
 .. include:: ../Includes.txt
 
 
+Introduction
+============
+
 What does it do?
-================
+----------------
 
 The extension diplays an error page when the requested page couldn't be found.
 TYPO3 itself would show a less nice eror message.

@@ -1,4 +1,4 @@
-# auto404
+# auto404 TYPO3 Extension
 
 This is a TYPO3 extension.
 
@@ -14,18 +14,28 @@ There are other extensions with the same (or more) functionality. This one is a 
 - custom error page possible with a normal content page
 - will redirect if a page was not deleted but moved to another domain in another page tree
 
+    
+## Usage
+
+Further information: https://docs.typo3.org/typo3cms/extensions/auto404/
+
+### Dependencies
+
+* TYPO3 7.6 - 8.7
+
+### Installation
+
+#### Installation using Composer
+
+In your Composer based TYPO3 project root, just do `composer require colorcube/auto404`. 
+
+#### Installation as extension from TYPO3 Extension Repository (TER)
+
+Download and install the extension with the extension manager module.
+
 ## Contribute
 
+- Send pull requests to the repository. <https://github.com/colorcube/auto404>
+- Use the issue tracker for feedback and discussions. <https://github.com/colorcube/auto404/issues>
 
-*Git Repository*
-
-https://github.com/colorcube/auto404
-
-*Issue Tracker*
-
-https://github.com/colorcube/auto404/issues
-
-
-- Send pull requests to the repository
-- Use the issue tracker for feedback and discussions
 
