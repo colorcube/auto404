@@ -4,7 +4,7 @@ This is a TYPO3 extension.
 
 ## What does it do?
 
-The extension diplays an error page when the requested page couldn't be found.
+The extension displays an error page when the requested page couldn't be found.
 TYPO3 itself would show a less nice error message.
 
 There are other extensions with the same (or more) functionality. This one is a bit different:
