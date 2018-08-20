@@ -120,7 +120,7 @@ class FrontendHook
         $rootPageUid = PageService::getRootPageUidForDomain($requestedDomain);
 
         if ($rootPageUid) {
-            $this->log('Search below page '.$rootPageUid.' for 404 page with alias=\'http404\'');
+            $this->log('Search below page '.$rootPageUid.' for 404 page with module=\'http404\' or alias=\'http404\'');
             $errorPageRecord = PageService::getPageByAliasWithOverlay('http404', $rootPageUid, $languageUid);
 
             if ($errorPageRecord) {
