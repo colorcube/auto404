@@ -30,4 +30,5 @@ This is the inbuilt error message.
 
 .. figure:: ../Images/default-error-message.png
 
+
 You can use a normal TYPO3 page instead if you want.

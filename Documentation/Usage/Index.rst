@@ -41,15 +41,24 @@ A custom 404 page is a normal TYPO3 page. I suggest you mark it with 'not in men
 Two things are a must for that page to work:
 
 - it has to be a child page of the page which has the domain record on it
-- put 'http404' in the field *url alias*
+- select '404 Page' in the field *Contains Plugin* in the *Behaviour* tab:
+
 
 .. figure:: ../Images/custom-error-page.png
+
+    Setup custom 404 page.
+
+
+The 404 page will be shown with a different icon in the page tree.
 
 To test if your page work:
 
 - preview the page
 - call it with ?id=http404 (e.g. http://example.com/?id=http404)
 - call a page which doesn't exists (e.g. http://example.com/?id=99999999)
+
+In previous versions the *alias* field was used to identify the custom 404 page. Although those pages still work, this is
+deprecated.
 
 Remarks
 -------

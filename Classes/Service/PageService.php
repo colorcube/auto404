@@ -30,7 +30,10 @@ abstract class PageService
             ->select('*')
             ->from('pages')
             ->where(
-                $queryBuilder->expr()->eq('alias', $queryBuilder->createNamedParameter($alias, \PDO::PARAM_STR)),
+                $queryBuilder->expr()->orX(
+                    $queryBuilder->expr()->eq('alias', $queryBuilder->createNamedParameter($alias, \PDO::PARAM_STR)),
+                    $queryBuilder->expr()->eq('module', $queryBuilder->createNamedParameter($alias, \PDO::PARAM_STR))
+                ),
                 $queryBuilder->expr()->eq('pid', $queryBuilder->createNamedParameter($rootPageUid, \PDO::PARAM_INT))
             );
 
