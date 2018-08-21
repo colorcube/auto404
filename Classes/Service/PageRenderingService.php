@@ -134,7 +134,7 @@ abstract class PageRenderingService
     public static function showSimple404PageAndExit($homePageUrl = null)
     {
         if (!$homePageUrl) {
-            $requestedDomain = GeneralUtility::getIndpEnv('TYPO3_HOST_ONLY');
+            $requestedDomain = GeneralUtility::getIndpEnv('TYPO3_HOST');
             $homePageUrl = (GeneralUtility::getIndpEnv('TYPO3_SSL') ? "https" : "http") . "://" . $requestedDomain . "?is404=1";
         }
 

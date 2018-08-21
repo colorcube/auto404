@@ -75,9 +75,10 @@ abstract class PageService
      */
     public static function getRootPageUidForDomain(string $domain)
     {
-        $domain = explode(':', $domain);
-        $domain = strtolower(preg_replace('/\\.$/', '', $domain[0]));
+        list($domain, $port) = explode(':', $domain);
+        $domain = strtolower(preg_replace('/\\.$/', '', $domain));
         $domain = preg_replace('/\\/*$/', '', $domain);
+        $domainAndPort = $domain . ':' . $port; // most of the time we have no port here but we don't care
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('pages');
         $queryBuilder->getRestrictions()->removeAll();
         $row = $queryBuilder
@@ -101,6 +102,14 @@ abstract class PageService
                     $queryBuilder->expr()->eq(
                         'sys_domain.domainName',
                         $queryBuilder->createNamedParameter($domain . '/', \PDO::PARAM_STR)
+                    ),
+                    $queryBuilder->expr()->eq(
+                        'sys_domain.domainName',
+                        $queryBuilder->createNamedParameter($domainAndPort, \PDO::PARAM_STR)
+                    ),
+                    $queryBuilder->expr()->eq(
+                        'sys_domain.domainName',
+                        $queryBuilder->createNamedParameter($domainAndPort . '/', \PDO::PARAM_STR)
                     )
                 ),
                 'pages.deleted=0'

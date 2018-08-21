@@ -78,9 +78,10 @@ class FrontendHook
         $pageRecord = PageService::getPageWithOverlay($pageId, $languageUid);
 
         if ($pageRecord) {
-            $this->log('Yes we found the requested page '.$pageRecord['uid']);
+            $this->log('Yes we found the requested page: '.$pageRecord['uid']);
 
-            $requestedDomain = GeneralUtility::getIndpEnv('TYPO3_HOST_ONLY');
+            $requestedDomain = GeneralUtility::getIndpEnv('HTTP_HOST');
+            $this->log('Requested domain: '.$requestedDomain);
 
             $rootPageUidForRequestedDomain = PageService::getRootPageUidForDomain($requestedDomain);
             $rootPageUidForTargetPage = PageService::getRootPageUidForPage($pageRecord['uid']);
@@ -116,7 +117,8 @@ class FrontendHook
     {
         $this->log(__METHOD__);
 
-        $requestedDomain = GeneralUtility::getIndpEnv('TYPO3_HOST_ONLY');
+        $requestedDomain = GeneralUtility::getIndpEnv('HTTP_HOST');
+        $this->log('Requested domain: '.$requestedDomain);
         $rootPageUid = PageService::getRootPageUidForDomain($requestedDomain);
 
         if ($rootPageUid) {
@@ -143,7 +145,7 @@ class FrontendHook
     {
         $this->log(__METHOD__);
 
-        $requestedDomain = GeneralUtility::getIndpEnv('TYPO3_HOST_ONLY');
+        $requestedDomain = GeneralUtility::getIndpEnv('HTTP_HOST');
         $rootPageUid = PageService::getRootPageUidForDomain($requestedDomain);
 
         if ($rootPageUid) {
