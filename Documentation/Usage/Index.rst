@@ -54,11 +54,12 @@ The 404 page will be shown with a different icon in the page tree.
 To test if your page work:
 
 - preview the page
-- call it with ?id=http404 (e.g. http://example.com/?id=http404)
 - call a page which doesn't exists (e.g. http://example.com/?id=99999999)
 
-In previous versions the *alias* field was used to identify the custom 404 page. Although those pages still work, this is
-deprecated.
+.. note::
+    In previous versions the *alias* field was used to identify the custom 404 page. Although those pages still work, this
+    is deprecated. The reason for the change is that only one page with an alias name is possible, which doesn't work with a
+    multi site installation.
 
 Remarks
 -------
