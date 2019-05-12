@@ -27,7 +27,7 @@ abstract class PageRenderingService
         // we're messing with TSFE here, but hey we're exit anyway
 
         // we don't want to go in a 404 loop
-        $GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = [];
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '';
 
         // override the requested page
         $tsfe->id = $pageUid;
