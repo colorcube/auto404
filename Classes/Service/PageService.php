@@ -4,11 +4,9 @@ declare(strict_types=1);
 namespace Colorcube\Auto404\Service;
 
 
-use Colorcube\SimulateStaticUrls\Service\FrontendControllerService;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Frontend\Page\PageRepository;
 
 abstract class PageService
@@ -41,7 +39,6 @@ abstract class PageService
 
         if ($pageRecord && $languageUid > 0) {
             $pageRecord = FrontendControllerService::getPageRepository()->getPageOverlay($pageRecord, $languageUid);
-
         }
 
         return $pageRecord;
