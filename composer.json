@@ -34,7 +34,6 @@
     }
   },
   "replace": {
-    "auto404": "self.version",
     "typo3-ter/auto404": "self.version"
   },
   "extra": {
