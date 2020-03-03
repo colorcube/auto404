@@ -17,7 +17,7 @@ There are other extensions with the same (or more) functionality. This one is a 
     
 ## Usage
 
-Further information: https://docs.typo3.org/typo3cms/extensions/auto404/
+Further information: https://docs.typo3.org/p/colorcube/auto404/master/en-us/
 
 ### Dependencies
 
